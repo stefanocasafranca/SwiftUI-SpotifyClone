@@ -11,25 +11,37 @@ struct ContentItemViewer: View {
     var body: some View {
         ZStack{
             VStack {
-            Spacer ()
-                . frame(height: 50)
-            Image (systemName: "music.note")
-            Text ("Title")
-            Text ("SubTitle")
-            Spacer ()
-            
-        }
-            VStack {
+                Spacer ()   . frame(height: 50)
+                Image (systemName: "music.note")
+                Text ("Title")
+                Text ("SubTitle")
                 Spacer ()
-                    .frame(width:50, height:200)
-                    .background(Color.red.opacity(0.3))
-                
-                Spacer ()
-                    .frame(width: 200)
-                    .background(Color.blue)
-                
                 
             }
+            
+            ScrollView(){
+                VStack (spacing:0){
+                    HStack {
+                        Spacer ()
+                            .frame(height:200)
+                            .background(Color.green.opacity(0.3))
+                    }
+                    
+                    VStack {
+                        ForEach(0..<100) { indicator in
+                            
+                            HStack {
+                                Text("\(indicator)").foregroundColor(.white)
+                                Spacer ()
+                            }
+                            
+                        }
+                        
+                    }.background(Color.black.opacity(0.5))
+                    
+                } .background(Color.yellow.opacity(0.1))
+            }
+            
             
         }
     }
