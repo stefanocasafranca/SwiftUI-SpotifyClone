@@ -16,6 +16,7 @@
 		499DEF7A2C1E2F1F0005E7FD /* SwiftUI_SpotifyCloneUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 499DEF792C1E2F1F0005E7FD /* SwiftUI_SpotifyCloneUITestsLaunchTests.swift */; };
 		499DEF872C1E37A40005E7FD /* HomePageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 499DEF862C1E37A40005E7FD /* HomePageView.swift */; };
 		499DEF892C1E37CC0005E7FD /* SearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 499DEF882C1E37CC0005E7FD /* SearchView.swift */; };
+		499DEF8C2C1E425B0005E7FD /* ContentItemViewer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 499DEF8B2C1E425B0005E7FD /* ContentItemViewer.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,7 +49,7 @@
 		499DEF792C1E2F1F0005E7FD /* SwiftUI_SpotifyCloneUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUI_SpotifyCloneUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		499DEF862C1E37A40005E7FD /* HomePageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePageView.swift; sourceTree = "<group>"; };
 		499DEF882C1E37CC0005E7FD /* SearchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchView.swift; sourceTree = "<group>"; };
-		499DEF8A2C1E38D00005E7FD /* SF Symbols.pkg */ = {isa = PBXFileReference; lastKnownFileType = file; name = "SF Symbols.pkg"; path = "../../../../../Volumes/SFSymbols/SF Symbols.pkg"; sourceTree = "<group>"; };
+		499DEF8B2C1E425B0005E7FD /* ContentItemViewer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentItemViewer.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,9 +101,7 @@
 			isa = PBXGroup;
 			children = (
 				499DEF5C2C1E2F1D0005E7FD /* SwiftUI_SpotifyCloneApp.swift */,
-				499DEF5E2C1E2F1D0005E7FD /* ContentView.swift */,
-				499DEF862C1E37A40005E7FD /* HomePageView.swift */,
-				499DEF882C1E37CC0005E7FD /* SearchView.swift */,
+				499DEF8D2C1E42650005E7FD /* Views */,
 				499DEF602C1E2F1F0005E7FD /* Assets.xcassets */,
 				499DEF622C1E2F1F0005E7FD /* Preview Content */,
 			);
@@ -130,9 +129,19 @@
 			children = (
 				499DEF772C1E2F1F0005E7FD /* SwiftUI_SpotifyCloneUITests.swift */,
 				499DEF792C1E2F1F0005E7FD /* SwiftUI_SpotifyCloneUITestsLaunchTests.swift */,
-				499DEF8A2C1E38D00005E7FD /* SF Symbols.pkg */,
 			);
 			path = "SwiftUI-SpotifyCloneUITests";
+			sourceTree = "<group>";
+		};
+		499DEF8D2C1E42650005E7FD /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				499DEF5E2C1E2F1D0005E7FD /* ContentView.swift */,
+				499DEF8B2C1E425B0005E7FD /* ContentItemViewer.swift */,
+				499DEF862C1E37A40005E7FD /* HomePageView.swift */,
+				499DEF882C1E37CC0005E7FD /* SearchView.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -267,6 +276,7 @@
 			files = (
 				499DEF892C1E37CC0005E7FD /* SearchView.swift in Sources */,
 				499DEF872C1E37A40005E7FD /* HomePageView.swift in Sources */,
+				499DEF8C2C1E425B0005E7FD /* ContentItemViewer.swift in Sources */,
 				499DEF5F2C1E2F1D0005E7FD /* ContentView.swift in Sources */,
 				499DEF5D2C1E2F1D0005E7FD /* SwiftUI_SpotifyCloneApp.swift in Sources */,
 			);
