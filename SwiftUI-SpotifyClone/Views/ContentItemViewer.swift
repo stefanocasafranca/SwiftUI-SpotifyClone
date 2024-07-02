@@ -8,38 +8,61 @@
 import SwiftUI
 
 struct ContentItemViewer: View {
+    
+    var topSpacerHeight:CGFloat = 400
+    
     var body: some View {
         ZStack{
+            
+            //Layer 0
+            LinearGradient(gradient: Gradient(colors: [Color.init(red:61/255, green:189/255,blue:115/255), Color.black]
+                                             
+        ), startPoint: .top, endPoint: .bottom).edgesIgnoringSafeArea(.all)
+
+            //Layer 1
             VStack {
                 Spacer ()   . frame(height: 50)
-                Image (systemName: "music.note")
+                Image ("CanserberoCover")
+                    .resizable()
+                    .frame(width:200 , height:200)
                 Text ("Title")
+                    .foregroundColor(.white)
+                    .font(.system(size: 24, weight: .bold))
                 Text ("SubTitle")
+                    .foregroundColor(.init(red:0.5, green:0.5,blue:0.5))
                 Spacer ()
                 
             }
-            
+            //Layer 2
             ScrollView(){
                 VStack (spacing:0){
                     HStack {
                         Spacer ()
-                            .frame(height:200)
-                            .background(Color.green.opacity(0.3))
+                            .frame(height:topSpacerHeight)
+                            .background(LinearGradient(gradient: Gradient(colors: [
+                                Color.clear,
+                                Color.clear,
+                                Color.clear,
+                                Color.clear,
+                                Color.clear,
+                                Color.clear,
+                                Color.black
+                            ]), startPoint: .top, endPoint: .bottom))
                     }
                     
                     VStack {
                         ForEach(0..<100) { indicator in
                             
                             HStack {
-                                Text("\(indicator)").foregroundColor(.white)
+                                SongsButton()
                                 Spacer ()
                             }
                             
                         }
                         
-                    }.background(Color.black.opacity(0.5))
+                    }.background(Color.black)
                     
-                } .background(Color.yellow.opacity(0.1))
+                } .background(Color.clear)
             }
             
             

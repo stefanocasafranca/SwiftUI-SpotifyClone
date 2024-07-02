@@ -9,7 +9,15 @@ import SwiftUI
 
 struct SongsButton: View {
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        HStack{
+            Image(systemName: "timelapse").padding (.trailing,10)
+            Text("Text")
+            Spacer ()
+            Image(systemName: "ellipsis")
+        }
+        .padding (15)
+        .background(Color.black)
+        .foregroundColor(.white)
     }
 }
 
