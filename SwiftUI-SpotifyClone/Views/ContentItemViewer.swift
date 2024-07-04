@@ -10,13 +10,14 @@ import SwiftUI
 struct ContentItemViewer: View {
     
     var topSpacerHeight:CGFloat = 400
+    var playButtonOffset:CGFloat = 335
     
     var body: some View {
         ZStack{
             
             //Layer 0
             LinearGradient(gradient: Gradient(colors: [Color.init(red:61/255, green:189/255,blue:115/255), Color.black]
-                                             
+                                        
         ), startPoint: .top, endPoint: .bottom).edgesIgnoringSafeArea(.all)
 
             //Layer 1
@@ -33,6 +34,7 @@ struct ContentItemViewer: View {
                 Spacer ()
                 
             }
+            
             //Layer 2
             ScrollView(){
                 VStack (spacing:0){
@@ -64,7 +66,18 @@ struct ContentItemViewer: View {
                     
                 } .background(Color.clear)
             }
-            
+            //Layer 3
+            VStack{
+                Spacer ()
+                    .frame(height: playButtonOffset)
+                Text ("PLAY")
+                    .foregroundColor(.white)
+                    .frame(width: 240, height: 50)
+                    .background(Color.init(red:30/255,green:215/255, blue:96/255))
+                    .cornerRadius (25)
+                    .font(.system(size:20, weight:.bold))
+                Spacer()
+            }
             
         }
     }
