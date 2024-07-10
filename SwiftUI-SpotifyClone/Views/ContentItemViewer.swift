@@ -10,7 +10,7 @@ import SwiftUI
 struct ContentItemViewer: View {
     
     var topSpacerHeight:CGFloat = 400
-    var playButtonOffset:CGFloat = 335
+    @State var playButtonOffset:CGFloat = 335
     
     var body: some View {
         ZStack{
