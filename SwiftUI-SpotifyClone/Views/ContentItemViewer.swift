@@ -10,7 +10,7 @@ import SwiftUI
 struct ContentItemViewer: View {
     
     var topSpacerHeight:CGFloat = 400
-    @State var playButtonOffset:CGFloat = 335
+    @State var playButtonOffset:CGFloat = 335 //Everytime it changes will be tracked like automatic listening
     
     var body: some View {
         ZStack{
@@ -37,6 +37,17 @@ struct ContentItemViewer: View {
             
             //Layer 2
             ScrollView(){
+                //Geometry Reader for the Button that will let us keep track of our progress in our scroll (Where we are in the scroll)
+                GeometryReader{
+                    // -> Means that it will return whats on the right
+                    //in just separates the closure
+                    geo -> AnyView? in
+                    let thisOffset = geo.frame(in: .global).minY
+                    self.playButtonOffset = thisOffset
+                    return nil
+                    
+                }
+            
                 VStack (spacing:0){
                     HStack {
                         Spacer ()
