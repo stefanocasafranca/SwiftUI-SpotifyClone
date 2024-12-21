@@ -11,7 +11,7 @@ struct SongsButton: View {
     var body: some View {
         HStack{
             Image(systemName: "timelapse").padding (.trailing,10)
-            Text("Text")
+            Text("Y la Felicidad Que")
             Spacer ()
             Image(systemName: "ellipsis")
         }

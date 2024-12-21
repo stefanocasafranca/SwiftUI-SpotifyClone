@@ -20,7 +20,11 @@ struct ContentView: View {
                     Label("Search", systemImage: "magnifyingglass")
                 }
             
-
+            ContentItemViewer()
+                .tabItem {
+                    Label("Playlist", systemImage: "rectangle.stack.badge.play.fill")
+                }
+            
         }
     }
 }
