@@ -10,25 +10,29 @@ import SwiftUI
 struct ContentView: View {
     var body: some View {
         TabView {
-            HomePageView()
-                .tabItem {
-                    Label("Home", systemImage: "house")
-                }
-            
-            SearchView()
-                .tabItem {
-                    Label("Search", systemImage: "magnifyingglass")
-                }
-            
-            ContentItemViewer()
-                .tabItem {
-                    Label("Playlist", systemImage: "rectangle.stack.badge.play.fill")
-                }
-            
+            NavigationView {
+                HomePageView()
+            }
+            .tabItem {
+                Label("Home", systemImage: "house")
+            }
+
+            NavigationView {
+                SearchView()
+            }
+            .tabItem {
+                Label("Search", systemImage: "magnifyingglass")
+            }
+
+            NavigationView {
+                ContentItemViewer()
+            }
+            .tabItem {
+                Label("Playlist", systemImage: "rectangle.stack.badge.play.fill")
+            }
         }
     }
 }
-
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
         ContentView()
